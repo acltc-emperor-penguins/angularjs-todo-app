@@ -12,6 +12,10 @@
       }
     };
 
+    $scope.completeTask = function(index) {
+      $scope.tasks.splice(index, 1);
+    };
+
     window.scope = $scope;
   });
 
