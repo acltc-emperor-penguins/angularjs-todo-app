@@ -7,6 +7,7 @@
 
     $scope.addTask = function(task) {
       $scope.tasks.push(task);
+      $scope.newTask = null;
     };
 
     window.scope = $scope;
