@@ -2,7 +2,7 @@
 <div ng-app="app">
   <div ng-controller="tasksCtrl">
     <ul>
-      <li ng-repeat="task in tasks track by $index" ng-click="completeTask($index)">{{ task }}</li>
+      <li ng-repeat="task in tasks track by $index" ng-click="completeTask($index)">{{ task.text }}</li>
     </ul>
     <div>
       <input ng-model="newTask">

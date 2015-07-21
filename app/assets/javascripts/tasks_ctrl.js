@@ -3,11 +3,24 @@
 
   angular.module("app").controller("tasksCtrl", function($scope) {
     
-    $scope.tasks = ["Mow the lawn", "Take out trash", "Feed the cat"];
+    $scope.tasks = [
+      {
+        text: "Mow the lawn",
+        completed: false
+      },
+      {
+        text: "Take out trash",
+        completed: false
+      },
+      {
+        text: "Feed the rat",
+        completed: false
+      }
+    ];
 
-    $scope.addTask = function(task) {
-      if(task) {
-        $scope.tasks.push(task);
+    $scope.addTask = function(text) {
+      if(text) {
+        $scope.tasks.push({text: text, completed: false});
         $scope.newTask = null;
       }
     };
