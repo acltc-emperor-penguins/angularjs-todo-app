@@ -25,8 +25,8 @@
       }
     };
 
-    $scope.completeTask = function(index) {
-      $scope.tasks.splice(index, 1);
+    $scope.toggleComplete = function(task) {
+      task.completed = !task.completed;
     };
 
     window.scope = $scope;
